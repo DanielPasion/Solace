@@ -2,8 +2,6 @@ body{
   display: flex;
   justify-content: center;
   flex-direction: row;
-  margin: 0;
-  padding: 0;
   width: 100vw;
   background-color: #E8D2F5;
 }
@@ -13,5 +11,24 @@ body{
   flex-direction: row;
   justify-content: center;
   text-align: center;
-  width: 100vw;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.second-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+
+#text-box{
+  margin-top: 10%;
+}
+#solace {
+  height: auto;
+  width: 20%;
+  margin-right: 10%;
 }
