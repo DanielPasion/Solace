@@ -31,7 +31,13 @@ def capture_image():
 
 def findEmotion (result):
     max = 0
-    for i in range(len)
+    emotion = ""
+    for i in range(47):
+        if result[i]['score'] > max:
+            max = result[i]['score']
+            emotion = result[i]['name']
+    return [emotion,max]
+            
 
 while True:
     capture_image()
@@ -41,7 +47,12 @@ while True:
         config = FaceConfig(identify_faces=True)
         async with client.connect([config]) as socket:
             result = await socket.send_file("captured_image.jpg")
-            pprint(result['face']['predictions'][0]['emotions'][0])
+            print(result['face'])
+            try:
+                result['face']['predictions']
+                print(findEmotion(result['face']['predictions'][0]['emotions']))
+            except:
+                print("Faceless")
             
 
     asyncio.run(main())
