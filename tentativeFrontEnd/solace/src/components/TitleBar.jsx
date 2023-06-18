@@ -7,8 +7,8 @@ import './TitleBar.css'
 const TitleBar = (Props) => {
     return(
         <div className="bar">
-            <div id="logo">UrMom</div>
-            <div id="sonder">Sonder</div>
+            <img id="logo" src={require("./img/Solace-Logo.png")} alt="here lies a logo"></img>
+            <img id="title" src={require("./img/Solace-Title.png")} alt="here lies a title"></img>
             <div id="directions">Directions</div>
         </div>
     );
